@@ -1,29 +1,23 @@
-
-### Project: iDrop-swing- Desktop iRODS transfer manager and supporting libraries
-#### Date:
-#### Version: 4.3.7.0-RELEASE
-#### Git Tag: 
+# iDrop
 
 iDrop is a graphical multi-platform file transfer client suitable for moving large files, doing basic synchronization, and other
-tasks too 'heavy' for a standard web interface
-
-This interface is being revived and will become part of the regular Jargon release train starting with 4.3.0.1
-
-GitHub:  [https://github.com/irods-contrib/idrop](https://github.com/irods-contrib/idrop)
+tasks too 'heavy' for a standard web interface.
 
 ## Requirements
 
-- iDrop depends on Java 1.8+
-- iDrop is built using Maven
+ - Java 17+
+ - Maven
 
-iDrop-swing uses Maven for dependency management.  See the pom.xml file for references to various dependencies.
+## Build
 
-## Changes
+The following script will build the .jar file via Docker:
 
-#### Add negotiation drop down to grid config #130
+```
+bash build_jar.sh
+```
 
-Now support SSL negotiation settings per grid account
+## Run
 
-#### Update dependencies and upgrade Spring and Hibernate #136 and #137
-
-Update various dependencies, especially Hibernate. Update various bean configurations to reflect the shift to Hibernate5 semantics
+```
+java -jar idrop-swing/target/idrop-swing-<version>-jar-with-dependencies.jar
+```
