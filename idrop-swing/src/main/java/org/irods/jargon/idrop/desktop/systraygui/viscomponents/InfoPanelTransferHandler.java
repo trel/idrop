@@ -20,7 +20,7 @@ import org.irods.jargon.core.pub.domain.DataObject;
 import org.irods.jargon.idrop.desktop.systraygui.iDrop;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Handle drop events for the info panel. Local and iRODS files/collections can
@@ -34,7 +34,7 @@ public class InfoPanelTransferHandler extends TransferHandler {
      *
      */
     private static final long serialVersionUID = 2086198118265521062L;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(InfoPanelTransferHandler.class);
     public DataFlavor treeDataFlavor;
     private final iDrop idropGui;

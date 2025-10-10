@@ -28,7 +28,7 @@ import javax.swing.tree.TreePath;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileNode;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileSystemModel;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileTree;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -45,7 +45,7 @@ public class DeleteLocalFileDialog extends javax.swing.JDialog {
     private final LocalFileTree localFileTree;
     private final LocalFileNode deletedNode;
     private final List<LocalFileNode> deletedNodes;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(DeleteLocalFileDialog.class);
 
     /**

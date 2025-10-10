@@ -26,7 +26,7 @@ import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.finder.IRODSFinderDialog;
 import org.irods.jargon.transfer.dao.domain.TransferType;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -43,7 +43,7 @@ public class UploadDialog extends javax.swing.JDialog implements
     IRODSTree irodsTree;
     LocalFileTree localFileTree;
     String uploadTarget = "";
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSTree.class);
 
     /**

@@ -26,7 +26,7 @@ import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.idrop.finder.IRODSFinderDialog;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -41,7 +41,7 @@ public class CopyMoveDialog extends javax.swing.JDialog {
     private iDrop idropGUI;
     private IRODSTree irodsTree;
     private IRODSOutlineModel irodsFileSystemModel;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSTree.class);
 
     /**

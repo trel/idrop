@@ -6,8 +6,8 @@ package org.irods.jargon.conveyor.core.callables;
 import org.irods.jargon.conveyor.core.ConveyorExecutionException;
 import org.irods.jargon.conveyor.core.ConveyorService;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author Mike Conway - DICE (www.irods.org)
@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ConveyorCallableFactory {
 
-	private final Logger log = LoggerFactory
+	private final Logger log = LogManager
 			.getLogger(ConveyorCallableFactory.class);
 
 	public ConveyorCallableFactory() {

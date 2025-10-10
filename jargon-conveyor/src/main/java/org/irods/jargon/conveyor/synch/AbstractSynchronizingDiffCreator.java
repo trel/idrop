@@ -11,8 +11,8 @@ import org.irods.jargon.core.transfer.TransferStatusCallbackListener;
 import org.irods.jargon.datautils.tree.FileTreeModel;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
 import org.irods.jargon.transfer.dao.domain.Transfer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Given a synchronization, this component can create a proper file diff for
@@ -29,7 +29,7 @@ public abstract class AbstractSynchronizingDiffCreator extends
 
 	private static final char SLASH = '/';
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(AbstractSynchronizingDiffCreator.class);
 
 	public AbstractSynchronizingDiffCreator(

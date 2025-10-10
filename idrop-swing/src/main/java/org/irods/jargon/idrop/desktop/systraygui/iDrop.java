@@ -70,7 +70,7 @@ import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.transfer.dao.domain.GridAccount;
 import org.netbeans.swing.outline.Outline;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -88,7 +88,7 @@ public class iDrop extends javax.swing.JFrame implements ActionListener,
 
     private LocalFileTree fileTree = null;
     private LocalFileSystemModel localFileModel = null;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(iDrop.class);
     private boolean receivedStartupSignal = false;
     private TrayIcon trayIcon = null;

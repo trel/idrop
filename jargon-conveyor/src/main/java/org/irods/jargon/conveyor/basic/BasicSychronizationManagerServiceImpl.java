@@ -29,8 +29,8 @@ import org.irods.jargon.transfer.dao.domain.TransferAttempt;
 import org.irods.jargon.transfer.dao.domain.TransferStateEnum;
 import org.irods.jargon.transfer.dao.domain.TransferStatusEnum;
 import org.irods.jargon.transfer.dao.domain.TransferType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,6 +44,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class BasicSychronizationManagerServiceImpl extends
 		AbstractConveyorComponentService implements
 		SynchronizationManagerService {
+
+	private static final Logger log = LogManager.getLogger(BasicSychronizationManagerServiceImpl.class);
 
 	/**
 	 * Injected dependency
@@ -81,9 +83,6 @@ public class BasicSychronizationManagerServiceImpl extends
 	 * Injected dependency
 	 */
 	private ConveyorService conveyorService;
-
-	private static final Logger log = LoggerFactory
-			.getLogger(BasicSychronizationManagerServiceImpl.class);
 
 	/*
 	 * (non-Javadoc)

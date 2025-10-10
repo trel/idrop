@@ -60,7 +60,7 @@ import org.irods.jargon.usertagging.tags.IRODSTaggingService;
 import org.irods.jargon.usertagging.tags.TaggingServiceFactory;
 import org.irods.jargon.usertagging.tags.TaggingServiceFactoryImpl;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -82,7 +82,7 @@ public class IRODSInfoDialog extends javax.swing.JDialog implements
     private boolean isFile;
     private final IRODSTree irodsTree;
     private IRODSInfoDialog dialog;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSTree.class);
     private List<JCheckBox> boxes = new ArrayList<JCheckBox>();
 

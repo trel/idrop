@@ -30,7 +30,7 @@ import org.netbeans.swing.outline.DefaultOutlineModel;
 import org.netbeans.swing.outline.Outline;
 import org.netbeans.swing.outline.OutlineModel;
 import org.netbeans.swing.outline.TreePathSupport;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Swing JTree component for viewing iRODS server file system
@@ -45,7 +45,7 @@ public class IRODSFinderTree extends Outline implements TreeWillExpandListener,
      */
     private static final long serialVersionUID = 5427906936453797960L;
     public IRODSFinderDialog irodsFinderDialog = null;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSFinderTree.class);
     protected JPopupMenu m_popup = null;
     protected Action m_action;

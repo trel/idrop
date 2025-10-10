@@ -23,7 +23,7 @@ import org.irods.jargon.idrop.desktop.systraygui.utils.IdropConfig;
 import org.irods.jargon.idrop.desktop.systraygui.utils.IdropPropertiesHelper;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -34,7 +34,7 @@ public class SettingsDialog extends javax.swing.JDialog {
     private final IDROPCore idropCore;
     private final iDrop idropGui;
     private final IRODSAccount irodsAcct;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(SettingsDialog.class);
 
     /**

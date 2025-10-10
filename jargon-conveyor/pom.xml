@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.irods</groupId>
         <artifactId>idrop</artifactId>
-        <version>4.3.2.0-SNAPSHOT</version>
+        <version>4.3.7.0-RELEASE</version>
     </parent>
     <groupId>org.irods.jargon</groupId>
     <artifactId>jargon-conveyor</artifactId>
@@ -35,6 +35,10 @@
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbytools</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -85,10 +89,12 @@
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
         </dependency>
+<!--
         <dependency>
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
         </dependency>
+-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
@@ -103,7 +109,8 @@
         </dependency>
         <dependency>
             <groupId>org.antlr</groupId>
-            <artifactId>antlr</artifactId>
+            <artifactId>antlr4</artifactId>
+            <version>4.9.3</version>
         </dependency>
     </dependencies>
     <build>
@@ -115,7 +122,7 @@
                         <id>0</id>
                         <phase>validate</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <delete file="${basedir}/src/test/resources/testing.properties" />
                                 <touch file="${basedir}/src/test/resources/testing.properties"
                                        mkdirs="true" />
@@ -168,7 +175,7 @@
                                     test.option.gsi.user=${test.option.gsi.user}
                                     test.option.gsi.file=${test.option.gsi.file}
                                 </echo>
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>

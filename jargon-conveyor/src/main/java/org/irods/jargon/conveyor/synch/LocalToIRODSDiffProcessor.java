@@ -15,8 +15,8 @@ import org.irods.jargon.core.transfer.TransferStatus;
 import org.irods.jargon.core.utils.LocalFileUtils;
 import org.irods.jargon.datautils.tree.FileTreeDiffEntry;
 import org.irods.jargon.datautils.tree.FileTreeNode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Process a one-way local to iRODS diff
@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 public class LocalToIRODSDiffProcessor extends
 		AbstractSynchronizingDiffProcessor {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(LocalToIRODSDiffProcessor.class);
 
 	public LocalToIRODSDiffProcessor(final ConveyorService conveyorService,

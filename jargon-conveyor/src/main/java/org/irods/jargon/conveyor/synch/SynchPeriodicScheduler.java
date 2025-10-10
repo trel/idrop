@@ -14,8 +14,8 @@ import org.irods.jargon.core.exception.JargonRuntimeException;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
 import org.irods.jargon.transfer.dao.domain.Transfer;
 import org.irods.jargon.transfer.dao.domain.TransferStateEnum;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Timer task that can periodically schedule synchronization tasks. This is
@@ -29,7 +29,7 @@ public class SynchPeriodicScheduler extends TimerTask {
 
 	private final ConveyorService conveyorService;
 
-	public static final Logger log = LoggerFactory
+	public static final Logger log = LogManager
 			.getLogger(SynchPeriodicScheduler.class);
 
 	/**

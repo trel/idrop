@@ -33,7 +33,7 @@ import org.irods.jargon.idrop.desktop.systraygui.NewLocalDirectoryDialog;
 import org.irods.jargon.idrop.desktop.systraygui.RenameLocalDirectoryDialog;
 import org.irods.jargon.idrop.desktop.systraygui.iDrop;
 import org.irods.jargon.idrop.exceptions.IdropException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * JTree for viewing local file system, includes DnD support from
@@ -47,7 +47,7 @@ public class LocalFileTree extends JTree implements TreeWillExpandListener {
      *
      */
     private static final long serialVersionUID = -6360494898622869787L;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(LocalFileTree.class);
     private iDrop idropParentGui = null;
     private IDROPCore idropCore = null;

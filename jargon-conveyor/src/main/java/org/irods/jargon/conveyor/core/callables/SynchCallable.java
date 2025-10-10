@@ -19,8 +19,8 @@ import org.irods.jargon.transfer.dao.domain.Synchronization;
 import org.irods.jargon.transfer.dao.domain.Transfer;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
 import org.irods.jargon.transfer.dao.domain.TransferStatusEnum;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Process a synchronization transfer
@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SynchCallable extends AbstractConveyorCallable {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(SynchCallable.class);
 
 	/**

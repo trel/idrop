@@ -2,7 +2,7 @@
     <parent>
         <groupId>org.irods</groupId>
         <artifactId>idrop</artifactId>
-        <version>4.3.2.0-SNAPSHOT</version>
+        <version>4.3.7.0-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.irods.idrop</groupId>
@@ -42,11 +42,6 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-swing-outline</artifactId>
             <type>jar</type>
@@ -75,6 +70,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -112,6 +108,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.7.1</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -158,7 +155,7 @@
                         </goals>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <property name="src.dir" value="${project.build.sourceDirectory}" />
                                 <property name="package.dir" value="org/irods/jargon/idrop/desktop/systraygui/utils" />
                                 <property name="package.name" value="org.irods.jargon.idrop.desktop.systraygui.utils" />
@@ -170,7 +167,7 @@
                                 <echo file="${src.dir}/${package.dir}/Version.java" append="true" message=" public static String BUILD_TIME=&quot;${buildtime}&quot;;${line.separator}" />
                                 <echo file="${src.dir}/${package.dir}/Version.java" append="true" message="}${line.separator}" />
                                 <echo message="BUILD ${buildtime}" />
-                            </tasks>
+                            </target>
                         </configuration>
                     </execution>
                 </executions>

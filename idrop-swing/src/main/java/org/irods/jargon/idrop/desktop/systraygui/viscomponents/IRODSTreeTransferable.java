@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Transferrale coming from the swing tree depicting a remote iRODS file system
@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 public class IRODSTreeTransferable implements Transferable, ClipboardOwner {
 
     private final List<File> files;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSTreeTransferable.class);
     public static DataFlavor irodsTreeDataFlavor = null;
 

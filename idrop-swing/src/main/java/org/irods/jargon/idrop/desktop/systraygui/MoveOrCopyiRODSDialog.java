@@ -33,7 +33,7 @@ import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.transfer.dao.domain.Transfer;
 import org.irods.jargon.transfer.dao.domain.TransferType;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Dialog to confirm and process the move of a file to a new iRODS location
@@ -53,7 +53,7 @@ public class MoveOrCopyiRODSDialog extends javax.swing.JDialog {
     private final String targetAbsolutePath;
     private final IRODSFile sourceFile;
     private final List<IRODSFile> sourceFiles;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(MoveOrCopyiRODSDialog.class);
     private final boolean isCopy;
 

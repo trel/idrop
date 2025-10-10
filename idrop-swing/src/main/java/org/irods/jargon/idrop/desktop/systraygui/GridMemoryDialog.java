@@ -30,7 +30,7 @@ import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.transfer.dao.domain.GridAccount;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -45,7 +45,7 @@ public class GridMemoryDialog extends javax.swing.JDialog implements
     private static final long serialVersionUID = 1908366053493367650L;
     private GridMemoryDialog dialog;
     private final IDROPCore idropCore;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(MetadataTableModel.class);
 
     /**

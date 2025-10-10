@@ -6,14 +6,14 @@
     <parent>
         <groupId>org.irods</groupId>
         <artifactId>jargon-pom</artifactId>
-        <version>4.3.2.0-SNAPSHOT</version>
+        <version>4.3.7.0-RELEASE</version>
     </parent>
     <name>iRODS iDrop</name>
     <description>iRODS iDrop - personal web and desktop grid access clients</description>
     <url>https://code.renci.org/gf/project/irodsidrop/</url>
     <properties>
         <jargon.version>${project.version}</jargon.version>
-        <netbeans.version>RELEASE801</netbeans.version>
+        <netbeans.version>RELEASE90</netbeans.version>
     </properties>
     <issueManagement>
         <system>GitHub</system>
@@ -67,19 +67,6 @@
                 <checksumPolicy>warn</checksumPolicy>
             </snapshots>
         </repository>
-        <repository>
-            <id>netbeans.repository</id>
-            <name>netbeans.repository</name>
-            <url>http://bits.netbeans.org/maven2/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-        </repository>
     </repositories>
     <reporting>
         <plugins>
@@ -88,8 +75,8 @@
                 <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jxr-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -171,7 +158,12 @@
             <dependency>
                 <groupId>org.apache.derby</groupId>
                 <artifactId>derby</artifactId>
-                <version>10.14.2.0</version>
+                <version>10.16.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derbytools</artifactId>
+                <version>10.16.1.1</version>
             </dependency>
             <dependency>
                 <groupId>org.swinglabs</groupId>
@@ -246,26 +238,16 @@
                 <artifactId>jaxb-api</artifactId>
                 <version>2.3.1</version>
             </dependency>
-		
         </dependencies>
     </dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <scope>test</scope>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -273,13 +255,19 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.irods.jargon</groupId>
-            <artifactId>jargon-core</artifactId>
-            <scope>compile</scope>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.10.19</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-util</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.irods.jargon</groupId>
+            <artifactId>jargon-core</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -291,8 +279,6 @@
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
         </dependency>
-
-
     </dependencies>
     <build>
         <plugins>

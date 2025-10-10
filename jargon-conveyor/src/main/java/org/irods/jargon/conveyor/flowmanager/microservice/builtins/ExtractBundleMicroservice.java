@@ -12,8 +12,8 @@ import org.irods.jargon.core.exception.JargonException;
 import org.irods.jargon.core.pub.BulkFileOperationsAO;
 import org.irods.jargon.core.pub.io.IRODSFile;
 import org.irods.jargon.core.transfer.TransferStatus;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Microservice to extract a bundle on iRODS. This expects a bundle to extract
@@ -44,7 +44,7 @@ public class ExtractBundleMicroservice extends Microservice {
 	public static final String TARGET_RESOURCE = ExtractBundleMicroservice.class
 			.getName() + ":TARGET_RESOURCE";
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(ExtractBundleMicroservice.class);
 
 	/**

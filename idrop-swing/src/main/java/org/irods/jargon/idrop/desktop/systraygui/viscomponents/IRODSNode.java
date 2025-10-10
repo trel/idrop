@@ -16,7 +16,7 @@ import org.irods.jargon.idrop.desktop.systraygui.IRODSTreeContainingComponent;
 import org.irods.jargon.idrop.desktop.systraygui.MessageManager;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * tree node for iRODS file tree
@@ -30,7 +30,7 @@ public class IRODSNode extends DefaultMutableTreeNode {
      */
     private static final long serialVersionUID = 7660837627188146455L;
     private boolean cached = false;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSNode.class);
     public final IRODSAccount irodsAccount;
     public final IRODSFileSystem irodsFileSystem;

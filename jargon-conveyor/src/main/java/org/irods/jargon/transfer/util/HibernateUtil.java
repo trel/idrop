@@ -10,8 +10,8 @@ import org.irods.jargon.core.exception.JargonException;
 import org.irods.jargon.transfer.dao.domain.Transfer;
 import org.irods.jargon.transfer.dao.domain.TransferItem;
 import org.irods.jargon.transfer.util.StringEncryptor.EncryptionException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Utility to manage hibernate session. Instances are created such that they can
@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
  */
 public class HibernateUtil {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(HibernateUtil.class);
 
 	private final SessionFactory factory;

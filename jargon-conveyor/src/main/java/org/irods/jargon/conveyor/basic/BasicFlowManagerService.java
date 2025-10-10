@@ -14,8 +14,8 @@ import org.irods.jargon.conveyor.flowmanager.flow.FlowSpec;
 import org.irods.jargon.conveyor.flowmanager.flow.FlowSpecCacheService;
 import org.irods.jargon.conveyor.flowmanager.flow.SelectorProcessor;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Flow Manager service handles client-side actions and workflows
@@ -25,7 +25,7 @@ import org.slf4j.LoggerFactory;
  */
 public class BasicFlowManagerService implements FlowManagerService {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(BasicFlowManagerService.class);
 
 	/**

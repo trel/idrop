@@ -2,7 +2,7 @@ package org.irods.jargon.conveyor.core;
 
 import java.util.TimerTask;
 
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Task to periodically check the queue
@@ -23,7 +23,7 @@ public class ConveyorQueueTimerTask extends TimerTask {
 	 */
 	private volatile boolean paused = false;
 
-	private final org.slf4j.Logger log = LoggerFactory
+	private final org.apache.logging.log4j.Logger log = LogManager
 			.getLogger(ConveyorQueueTimerTask.class);
 
 	public ConveyorQueueTimerTask() {

@@ -24,7 +24,7 @@ import org.irods.jargon.core.query.CollectionAndDataObjectListingEntry;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSNode;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -40,7 +40,7 @@ public class FinderDeleteIRODSDialog extends javax.swing.JDialog {
     private final IRODSNode deletedNode;
     private final List<IRODSNode> deletedNodes;
     private final IRODSFinderDialog irodsFinderDialog;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(FinderDeleteIRODSDialog.class);
 
     /**

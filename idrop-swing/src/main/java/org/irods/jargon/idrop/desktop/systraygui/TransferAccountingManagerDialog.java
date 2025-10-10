@@ -40,7 +40,7 @@ import org.irods.jargon.transfer.dao.domain.TransferAttempt;
 import org.irods.jargon.transfer.dao.domain.TransferStateEnum;
 import org.irods.jargon.transfer.dao.domain.TransferStatusEnum;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -55,7 +55,7 @@ public class TransferAccountingManagerDialog extends javax.swing.JDialog
      *
      */
     private static final long serialVersionUID = 6768064190203607302L;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(TransferAccountingManagerDialog.class);
     private Transfer selectedTableObject = null;
     private final iDrop idropGui;

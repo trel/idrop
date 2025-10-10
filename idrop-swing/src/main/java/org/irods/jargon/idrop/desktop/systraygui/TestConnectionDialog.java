@@ -32,7 +32,7 @@ import org.irods.jargon.datautils.connectiontester.ConnectionTestResult;
 import org.irods.jargon.datautils.connectiontester.TestResultEntry;
 import org.irods.jargon.datautils.connectiontester.TestResultEntry.OperationType;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -52,7 +52,7 @@ public class TestConnectionDialog extends javax.swing.JDialog {
     private IDROPCore idropCore;
     private final ImageIcon okIcon = new ImageIcon(getClass().getResource("/org/irods/jargon/idrop/desktop/systraygui/images/dialog-ok-2.png"));
     private final ImageIcon failIcon = new ImageIcon(getClass().getResource("/org/irods/jargon/idrop/desktop/systraygui/images/red_X.png"));
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(TestConnectionDialog.class);
 
     /**

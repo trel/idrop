@@ -9,8 +9,8 @@ import org.irods.jargon.conveyor.flowmanager.microservice.Microservice;
 import org.irods.jargon.conveyor.flowmanager.microservice.MicroserviceException;
 import org.irods.jargon.core.transfer.TransferStatus;
 import org.irods.jargon.transfer.dao.domain.Transfer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Microservice to enqueue a transfer. This will use the current transfer status
@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  */
 public class EnqueueTransferMicroservice extends Microservice {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(EnqueueTransferMicroservice.class);
 
 	/**

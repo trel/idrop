@@ -7,8 +7,8 @@ import org.irods.jargon.conveyor.core.ConveyorBusyException;
 import org.irods.jargon.conveyor.core.ConveyorExecutorService.RunningStatus;
 import org.irods.jargon.conveyor.core.ConveyorService;
 import org.irods.jargon.core.exception.JargonException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Handy utilities for tests that need to run transfers via conveyer and test
@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
  */
 public class TransferTestRunningUtilities {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(TransferTestRunningUtilities.class);
 
 	/**

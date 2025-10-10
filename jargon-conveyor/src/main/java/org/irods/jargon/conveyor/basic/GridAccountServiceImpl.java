@@ -21,8 +21,8 @@ import org.irods.jargon.transfer.dao.TransferDAOException;
 import org.irods.jargon.transfer.dao.domain.GridAccount;
 import org.irods.jargon.transfer.dao.domain.KeyStore;
 import org.irods.jargon.transfer.exception.PassPhraseInvalidException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -56,7 +56,7 @@ public class GridAccountServiceImpl extends AbstractConveyorComponentService
 
     private CacheEncryptor cacheEncryptor = null;
 
-    private static final Logger log = LoggerFactory
+    private static final Logger log = LogManager
             .getLogger(GridAccountServiceImpl.class);
 
     /**

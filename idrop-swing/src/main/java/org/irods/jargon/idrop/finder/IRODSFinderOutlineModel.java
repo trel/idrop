@@ -26,14 +26,14 @@ import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.netbeans.swing.outline.DefaultOutlineModel;
 import org.netbeans.swing.outline.RowModel;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author Mike Conway - DICE (www.irods.org)
  */
 public class IRODSFinderOutlineModel extends DefaultOutlineModel {
 
-    public static final org.slf4j.Logger log = LoggerFactory
+    public static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSFinderOutlineModel.class);
     private final IRODSFileSystemModel treeModel;
     private final IRODSFinderTree irodsFinderTree;

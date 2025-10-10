@@ -20,8 +20,8 @@ import org.irods.jargon.datautils.tree.FileTreeModel;
 import org.irods.jargon.datautils.tree.FileTreeNode;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Abstract superclass for a mechanism to take a difference tree model and
@@ -41,7 +41,7 @@ import org.slf4j.LoggerFactory;
 public abstract class AbstractSynchronizingDiffProcessor implements
 		TransferStatusCallbackListener {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(AbstractSynchronizingDiffProcessor.class);
 
 	private final ConveyorService conveyorService;

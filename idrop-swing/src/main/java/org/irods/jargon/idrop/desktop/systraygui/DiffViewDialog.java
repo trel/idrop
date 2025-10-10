@@ -16,7 +16,7 @@ import org.irods.jargon.datautils.tree.FileTreeModel;
 import org.irods.jargon.datautils.tree.FileTreeNode;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.DiffTreeCustomRenderer;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.DiffViewData;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -29,7 +29,7 @@ public class DiffViewDialog extends javax.swing.JDialog {
      */
     private static final long serialVersionUID = 66014425290634547L;
     private DiffViewData diffViewData;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(DiffViewDialog.class);
     private final FileTreeModel fileTreeModel;
 

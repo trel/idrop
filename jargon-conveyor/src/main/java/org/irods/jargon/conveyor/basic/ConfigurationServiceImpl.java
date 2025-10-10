@@ -15,8 +15,8 @@ import org.irods.jargon.core.transfer.TransferControlBlock;
 import org.irods.jargon.transfer.dao.ConfigurationPropertyDAO;
 import org.irods.jargon.transfer.dao.TransferDAOException;
 import org.irods.jargon.transfer.dao.domain.ConfigurationProperty;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -37,7 +37,7 @@ public class ConfigurationServiceImpl extends AbstractConveyorComponentService
 	private final Object propsLockObject = new Object();
 	public static final String TEAR_OFF_MODE = "tear.off.mode";
 
-	private final Logger log = LoggerFactory
+	private final Logger log = LogManager
 			.getLogger(ConfigurationServiceImpl.class);
 
 	/*
@@ -236,7 +236,7 @@ public class ConfigurationServiceImpl extends AbstractConveyorComponentService
 		}
 
 		for (ConfigurationProperty configurationProperty : configurationProperties) {
-			log.info("adding configuration property from database: {}",
+			log.debug("adding configuration property from database: {}",
 					configurationProperty);
 			properties.put(configurationProperty.getPropertyKey(),
 					configurationProperty.getPropertyValue());
@@ -358,7 +358,7 @@ public class ConfigurationServiceImpl extends AbstractConveyorComponentService
 		CachedConveyorConfigurationProperties cachedProps = new CachedConveyorConfigurationProperties();
 
 		for (ConfigurationProperty property : props) {
-			log.info("property:{}", property);
+			log.debug("property:{}", property);
 			if (property.getPropertyKey().equals(
 					ConfigurationPropertyConstants.LOG_SUCCESSFUL_FILES_KEY)) {
 				cachedProps.setLogSuccessfulTransfers(property

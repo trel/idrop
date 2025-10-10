@@ -22,8 +22,8 @@ import org.irods.jargon.transfer.dao.domain.TransferAttemptTypeEnum;
 import org.irods.jargon.transfer.dao.domain.TransferItem;
 import org.irods.jargon.transfer.dao.domain.TransferStateEnum;
 import org.irods.jargon.transfer.dao.domain.TransferStatusEnum;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -65,7 +65,7 @@ public class TransferAccountingManagementServiceImpl extends
 
 	private ConfigurationService configurationService;
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(TransferAccountingManagementServiceImpl.class);
 
 	/**

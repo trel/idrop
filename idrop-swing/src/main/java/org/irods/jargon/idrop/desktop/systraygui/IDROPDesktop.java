@@ -22,7 +22,7 @@ import org.irods.jargon.idrop.desktop.systraygui.utils.LookAndFeelManager;
 import org.irods.jargon.idrop.exceptions.IdropAlreadyRunningException;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Bootstrapping class for iDrop, load config, create necessary services, and
@@ -34,7 +34,7 @@ public class IDROPDesktop {
 
     private iDrop idrop;
     private IDROPCore idropCore;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IDROPDesktop.class);
     public static final int STARTUP_SEQUENCE_PAUSE_INTERVAL = 1000;
 
@@ -126,7 +126,6 @@ public class IDROPDesktop {
 
             log.info("config properties derived...");
             idropCore.setIdropConfig(new IdropConfig(derivedProperties));
-            idropCore.getIdropConfig().setUpLogging();
 
         } catch (IdropAlreadyRunningException are) {
             log.error("idrop is already running, shutting down");

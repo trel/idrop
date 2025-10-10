@@ -26,7 +26,7 @@ import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSOutlineModel
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSTree;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -42,7 +42,7 @@ public class DeleteIRODSDialog extends javax.swing.JDialog {
     private final IRODSTree irodsTree;
     private final IRODSNode deletedNode;
     private final List<IRODSNode> deletedNodes;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(DeleteIRODSDialog.class);
 
     /**

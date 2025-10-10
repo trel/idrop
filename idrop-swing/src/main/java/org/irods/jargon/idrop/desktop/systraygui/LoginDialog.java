@@ -18,7 +18,7 @@ import org.irods.jargon.core.exception.AuthenticationException;
 import org.irods.jargon.core.exception.JargonException;
 import org.irods.jargon.idrop.desktop.systraygui.services.IdropConfigurationService;
 import org.irods.jargon.idrop.desktop.systraygui.utils.IdropPropertiesHelper;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -28,7 +28,7 @@ public class LoginDialog extends JDialog {
 
     private static final long serialVersionUID = 1L;
     private IDROPCore idropCore = null;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(LoginDialog.class);
     private boolean validated = false;
 

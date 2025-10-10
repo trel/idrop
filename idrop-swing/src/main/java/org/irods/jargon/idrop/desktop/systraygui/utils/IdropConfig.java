@@ -1,12 +1,6 @@
 package org.irods.jargon.idrop.desktop.systraygui.utils;
 
-import java.io.IOException;
 import java.util.Properties;
-
-import org.apache.log4j.Level;
-import org.apache.log4j.PatternLayout;
-import org.apache.log4j.RollingFileAppender;
-
 import org.irods.jargon.idrop.desktop.systraygui.services.IdropConfigurationService;
 
 /**
@@ -405,58 +399,6 @@ public class IdropConfig {
         }
 
         return showWizard;
-
-    }
-
-    /**
-     * Should I have a rolling log in the user dir? Will return null of no
-     * logging desired, otherwise, will return a log level
-     *
-     * @return
-     */
-    public String getLogLevelForRollingLog() {
-        String propValue = idropProperties
-                .getProperty(IdropPropertiesHelper.ROLLING_LOG_LEVEL);
-        return propValue;
-
-    }
-
-    public void setUpLogging() {
-        String rollingLogLevel = getLogLevelForRollingLog();
-
-        if (rollingLogLevel == null) {
-            return;
-        }
-
-		// log level is specified, set up a rolling logger
-        String userHomeDirectory = System.getProperty("user.home");
-        StringBuilder sb = new StringBuilder();
-        sb.append(userHomeDirectory);
-        sb.append("/.idrop/idrop.log");
-
-        org.apache.log4j.Logger rootLogger = org.apache.log4j.Logger
-                .getRootLogger();
-        if (rollingLogLevel.equalsIgnoreCase("INFO")) {
-            rootLogger.setLevel(Level.INFO);
-        } else if (rollingLogLevel.equalsIgnoreCase("DEBUG")) {
-            rootLogger.setLevel(Level.DEBUG);
-        } else if (rollingLogLevel.equalsIgnoreCase("WARN")) {
-            rootLogger.setLevel(Level.WARN);
-        } else {
-            rootLogger.setLevel(Level.ERROR);
-        }
-
-        PatternLayout layout = new PatternLayout(
-                "%d %-4r [%t] %-5p %c %x - %m%n");
-
-        try {
-            RollingFileAppender rfa = new RollingFileAppender(layout,
-                    sb.toString());
-            rfa.setMaximumFileSize(1000000);
-            rootLogger.addAppender(rfa);
-        } catch (IOException e) {
-            // e.printStackTrace();
-        }
 
     }
 

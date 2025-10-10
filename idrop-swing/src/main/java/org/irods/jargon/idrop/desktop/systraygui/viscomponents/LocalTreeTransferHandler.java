@@ -26,7 +26,7 @@ import org.irods.jargon.idrop.desktop.systraygui.iDrop;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.transfer.dao.domain.TransferType;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * A transfer handler for the local file tree
@@ -39,7 +39,7 @@ public class LocalTreeTransferHandler extends TransferHandler {
      *
      */
     private static final long serialVersionUID = 4432049205458852642L;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(LocalTreeTransferHandler.class);
     public final iDrop idropGui;
 

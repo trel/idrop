@@ -13,7 +13,7 @@ import org.irods.jargon.core.query.CollectionAndDataObjectListingEntry;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSNode;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.netbeans.swing.outline.Outline;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This is a set of utilities for manipulating a swing Jtree
@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
  */
 public class FinderUtils {
 
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(FinderUtils.class);
 
     public static IRODSNode findChild(final IRODSNode parent,

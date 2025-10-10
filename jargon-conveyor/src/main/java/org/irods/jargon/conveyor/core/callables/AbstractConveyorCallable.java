@@ -26,8 +26,8 @@ import org.irods.jargon.transfer.dao.domain.GridAccount;
 import org.irods.jargon.transfer.dao.domain.Transfer;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
 import org.irods.jargon.transfer.dao.domain.TransferStatusEnum;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -59,7 +59,7 @@ public abstract class AbstractConveyorCallable implements
 	private TransferControlBlock transferControlBlock;
 	private FlowCoProcessor flowCoProcessor;
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(AbstractConveyorCallable.class);
 
 	private List<FlowSpec> candidateFlowSpecs = null;

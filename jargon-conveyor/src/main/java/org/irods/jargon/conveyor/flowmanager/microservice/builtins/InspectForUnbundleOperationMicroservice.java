@@ -10,8 +10,8 @@ import org.irods.jargon.conveyor.flowmanager.microservice.MicroserviceException;
 import org.irods.jargon.core.transfer.TransferStatus;
 import org.irods.jargon.core.transfer.TransferStatus.TransferType;
 import org.irods.jargon.core.utils.LocalFileUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Inspect a source and see if a tar file is being transferred that should be
@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 public class InspectForUnbundleOperationMicroservice extends
 		ConditionMicroservice {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(InspectForUnbundleOperationMicroservice.class);
 
 	/*

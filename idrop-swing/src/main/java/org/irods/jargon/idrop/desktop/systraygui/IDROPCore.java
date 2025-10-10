@@ -16,13 +16,13 @@ import org.irods.jargon.idrop.desktop.systraygui.services.IconManager;
 import org.irods.jargon.idrop.desktop.systraygui.services.IdropConfigurationService;
 import org.irods.jargon.idrop.desktop.systraygui.utils.IdropConfig;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 public class IDROPCore {
 
     private IRODSAccount irodsAccount = null;
     private IRODSFileSystem irodsFileSystem = null;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IDROPCore.class);
 
     public IRODSFileSystem getIrodsFileSystem() {

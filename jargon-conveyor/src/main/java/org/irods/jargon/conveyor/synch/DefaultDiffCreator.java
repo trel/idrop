@@ -16,8 +16,8 @@ import org.irods.jargon.datautils.tree.FileTreeDiffUtilityImpl;
 import org.irods.jargon.datautils.tree.FileTreeModel;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
 import org.irods.jargon.transfer.dao.domain.Transfer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Default diff creating component based on comparing two trees, and computing
@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
  */
 public class DefaultDiffCreator extends AbstractSynchronizingDiffCreator {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(DefaultDiffCreator.class);
 
 	public DefaultDiffCreator(final ConveyorService conveyorService,

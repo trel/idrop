@@ -15,7 +15,7 @@ import org.irods.jargon.idrop.finder.IRODSFinderDialog;
 import org.irods.jargon.transfer.dao.domain.FrequencyType;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
 import org.irods.jargon.transfer.dao.domain.SynchronizationType;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -26,7 +26,7 @@ public class AddSynchronizationDialog extends javax.swing.JDialog {
     private boolean editMode = false;
     private final IDROPCore idropCore;
     private Synchronization synchronization = new Synchronization();
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(AddSynchronizationDialog.class);
 
     /**

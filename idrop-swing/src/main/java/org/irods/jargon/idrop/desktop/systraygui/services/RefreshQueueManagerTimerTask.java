@@ -15,8 +15,8 @@ import java.util.TimerTask;
 public class RefreshQueueManagerTimerTask extends TimerTask {
 
 	// final QueueManagerDialog queueManagerDialog;
-	// public static org.slf4j.Logger log =
-	// LoggerFactory.getLogger(RefreshQueueManagerTimerTask.class);
+	// public static org.apache.logging.log4j.Logger log =
+	// LogManager.getLogger(RefreshQueueManagerTimerTask.class);
 	//
 	// public static final RefreshQueueManagerTimerTask instance(
 	// final QueueManagerDialog queueManagerDialog) throws IdropException {

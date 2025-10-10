@@ -27,7 +27,7 @@ import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSOutlineModel
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSTree;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Dialog to gather a new directory name
@@ -44,7 +44,7 @@ public class RenameIRODSDirectoryDialog extends javax.swing.JDialog {
     private final String currentAbsolutePath;
     private final IRODSTree stagingViewTree;
     private final String parentAbsPath;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(RenameIRODSDirectoryDialog.class);
 
     /**

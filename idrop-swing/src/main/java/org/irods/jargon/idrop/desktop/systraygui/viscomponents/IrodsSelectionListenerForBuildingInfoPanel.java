@@ -9,7 +9,7 @@ import javax.swing.event.TreeExpansionEvent;
 
 import org.irods.jargon.idrop.desktop.systraygui.iDrop;
 import org.irods.jargon.idrop.exceptions.IdropException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Class to encapsulate handling of info panel. This object will listen to tree
@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 public class IrodsSelectionListenerForBuildingInfoPanel implements
         ListSelectionListener {
 
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IrodsSelectionListenerForBuildingInfoPanel.class);
     private final iDrop idrop;
 

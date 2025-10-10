@@ -1,7 +1,7 @@
 
 ### Project: iDrop-swing- Desktop iRODS transfer manager and supporting libraries
 #### Date:
-#### Version: 4.3.0.2-SNAPSHOT
+#### Version: 4.3.7.0-RELEASE
 #### Git Tag: 
 
 iDrop is a graphical multi-platform file transfer client suitable for moving large files, doing basic synchronization, and other
@@ -9,16 +9,14 @@ tasks too 'heavy' for a standard web interface
 
 This interface is being revived and will become part of the regular Jargon release train starting with 4.3.0.1
 
-GitHub:  [[https://github.com/DICE-UNC/idrop]]
+GitHub:  [https://github.com/irods-contrib/idrop](https://github.com/irods-contrib/idrop)
 
 ## Requirements
 
--iDrop depends on Java 1.8+
--iDrop is built using Maven
+- iDrop depends on Java 1.8+
+- iDrop is built using Maven
 
 iDrop-swing uses Maven for dependency management.  See the pom.xml file for references to various dependencies.
-
-Note that the following bug and feature requests are logged in GForge with related commit information [[https://code.renci.org/gf/project/irodsidrop/tracker/]]
 
 ## Changes
 

@@ -9,7 +9,7 @@ import javax.swing.table.AbstractTableModel;
 import org.irods.jargon.core.query.CollectionAndDataObjectListingEntry;
 import org.irods.jargon.core.utils.MiscIRODSUtils;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Model for a JTable that represents iRODS files and collections using the
@@ -25,7 +25,7 @@ public class IRODSSearchTableModel extends AbstractTableModel {
     private static final long serialVersionUID = -7271103263452379537L;
     private List<CollectionAndDataObjectListingEntry> listingEntries = new ArrayList<CollectionAndDataObjectListingEntry>();
     private static final List<String> columnNames = new ArrayList<String>();
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSSearchTableModel.class);
 
     static {

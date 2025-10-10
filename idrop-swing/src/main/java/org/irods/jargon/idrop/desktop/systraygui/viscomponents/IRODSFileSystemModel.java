@@ -10,7 +10,7 @@ import javax.swing.tree.MutableTreeNode;
 import org.irods.jargon.core.connection.IRODSAccount;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Model of an underlying file system for browsing in a tree view
@@ -18,6 +18,8 @@ import org.slf4j.LoggerFactory;
  * @author Mike Conway - DICE (www.irods.org)
  */
 public class IRODSFileSystemModel extends DefaultTreeModel {
+
+    public static org.apache.logging.log4j.Logger log = LogManager.getLogger(IRODSFileSystemModel.class);
 
     /**
      *
@@ -28,9 +30,6 @@ public class IRODSFileSystemModel extends DefaultTreeModel {
     public void removeNodeFromParent(final MutableTreeNode mtn) {
         super.removeNodeFromParent(mtn);
     }
-
-    public static org.slf4j.Logger log = LoggerFactory
-            .getLogger(IRODSFileSystemModel.class);
 
     private static class TreeModelListener implements
             javax.swing.event.TreeModelListener {

@@ -11,8 +11,8 @@ import org.irods.jargon.core.exception.JargonException;
 import org.irods.jargon.core.pub.DataTransferOperations;
 import org.irods.jargon.core.transfer.TransferControlBlock;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Callable for handling an iRODS copy operation
@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  */
 public class CopyConveyorCallable extends AbstractConveyorCallable {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(PutConveyorCallable.class);
 
 	public CopyConveyorCallable(final TransferAttempt transferAttempt,

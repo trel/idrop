@@ -31,7 +31,7 @@ import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.netbeans.swing.outline.DefaultOutlineModel;
 import org.netbeans.swing.outline.Outline;
 import org.netbeans.swing.outline.TreePathSupport;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Swing JTree component for viewing iRODS server file system
@@ -45,7 +45,7 @@ public class IRODSTree extends Outline implements TreeWillExpandListener,
      *
      */
     private static final long serialVersionUID = -7815706939610881953L;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSTree.class);
     protected iDrop idropParentGui = null;
     protected JPopupMenu m_popup = null;

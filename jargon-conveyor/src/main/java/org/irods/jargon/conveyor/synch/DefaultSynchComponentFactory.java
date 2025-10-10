@@ -6,8 +6,8 @@ package org.irods.jargon.conveyor.synch;
 import org.irods.jargon.conveyor.core.ConveyorService;
 import org.irods.jargon.core.transfer.TransferControlBlock;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Implementation of a factory to create various components used to process
@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
  */
 public class DefaultSynchComponentFactory implements SynchComponentFactory {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(DefaultSynchComponentFactory.class);
 
 	/**

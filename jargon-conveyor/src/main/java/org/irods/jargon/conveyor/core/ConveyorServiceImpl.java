@@ -11,8 +11,8 @@ import org.irods.jargon.core.exception.AuthenticationException;
 import org.irods.jargon.core.exception.JargonException;
 import org.irods.jargon.core.pub.IRODSAccessObjectFactory;
 import org.irods.jargon.transfer.exception.PassPhraseInvalidException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Abstract implementation of the <code>ConveyorService</code> interface.
@@ -76,7 +76,7 @@ public class ConveyorServiceImpl implements ConveyorService {
 	 */
 	private SynchComponentFactory synchComponentFactory;
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(BasicQueueManagerServiceImpl.class);
 
 	@Override

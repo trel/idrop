@@ -21,7 +21,7 @@ import org.irods.jargon.core.query.CollectionAndDataObjectListingEntry;
 import org.irods.jargon.core.query.MetaDataAndDomainData;
 import org.irods.jargon.core.rule.IRODSRuleExecResult;
 import org.irods.jargon.idrop.exceptions.IdropException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Delegate class that interacts with iRODS based on GUI interactions FIXME:
@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
  */
 public class IRODSFileService {
 
-	public static org.slf4j.Logger log = LoggerFactory
+	public static org.apache.logging.log4j.Logger log = LogManager
 			.getLogger(IRODSFileService.class);
 	private final IRODSAccount irodsAccount;
 	private final IRODSFileSystem irodsFileSystem;

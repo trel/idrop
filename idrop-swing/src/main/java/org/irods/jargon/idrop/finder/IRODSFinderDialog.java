@@ -24,7 +24,7 @@ import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSFileSystemMo
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSNode;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSRowModel;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -51,7 +51,7 @@ public class IRODSFinderDialog extends javax.swing.JDialog {
     private List<String> selectedAbsolutePaths = null;
     private final IRODSAccount irodsAccount;
 
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSFinderDialog.class);
     private IRODSFinderTree irodsTree = null;
 

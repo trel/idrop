@@ -17,7 +17,7 @@ import javax.swing.UIManager;
 import org.irods.jargon.conveyor.core.ConveyorBusyException;
 import org.irods.jargon.conveyor.core.ConveyorExecutionException;
 import org.irods.jargon.transfer.exception.PassPhraseInvalidException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -25,7 +25,7 @@ import org.slf4j.LoggerFactory;
  */
 public class PassPhraseDialog extends javax.swing.JDialog {
 
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(PassPhraseDialog.class);
 
     /**

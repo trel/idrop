@@ -5,7 +5,7 @@ import java.io.File;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.MutableTreeNode;
 
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * (New) tree node for local file tree
@@ -13,6 +13,8 @@ import org.slf4j.LoggerFactory;
  * @author Mike Conway - DICE (www.irods.org)
  */
 public class LocalFileNode extends DefaultMutableTreeNode {
+
+    public static org.apache.logging.log4j.Logger log = LogManager.getLogger(LocalFileNode.class);
 
     /**
      *
@@ -24,8 +26,6 @@ public class LocalFileNode extends DefaultMutableTreeNode {
         return cached;
     }
 
-    public static org.slf4j.Logger log = LoggerFactory
-            .getLogger(LocalFileNode.class);
 
     public LocalFileNode(final File file) {
         super(file);

@@ -16,7 +16,7 @@ import javax.swing.tree.TreePath;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileNode;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileSystemModel;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileTree;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Dialog to create a new local directory in the local file tree
@@ -33,7 +33,7 @@ public class NewLocalDirectoryDialog extends javax.swing.JDialog {
     private String parentDirectory = "";
     private final LocalFileTree localFileTree;
     private final LocalFileNode parentNode;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(NewLocalDirectoryDialog.class);
 
     public String getParentDirectory() {

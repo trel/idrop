@@ -6,8 +6,8 @@ package org.irods.jargon.conveyor.flowmanager.microservice.builtins;
 import org.irods.jargon.conveyor.flowmanager.microservice.ConditionMicroservice;
 import org.irods.jargon.conveyor.flowmanager.microservice.MicroserviceException;
 import org.irods.jargon.core.transfer.TransferStatus;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * A stub microservice that will never say go ahead but will end normally with a
@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
  */
 public class AlwaysDontRunConditionMicroservice extends ConditionMicroservice {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(AlwaysDontRunConditionMicroservice.class);
 
 	/*

@@ -8,7 +8,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.event.TreeExpansionEvent;
 
 import org.irods.jargon.idrop.exceptions.IdropException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This object will listen to tree selection events in the iDrop Finder Dialog
@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
  */
 public class IRODSFinderTreeSelectionListener implements ListSelectionListener {
 
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IRODSFinderTreeSelectionListener.class);
     private final IRODSFinderDialog irodsFinderDialog;
 

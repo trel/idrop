@@ -7,8 +7,8 @@ import org.irods.jargon.conveyor.core.BootstrapperException;
 import org.irods.jargon.conveyor.core.ConveyorBootstrapper;
 import org.irods.jargon.conveyor.core.ConveyorService;
 import org.irods.jargon.core.pub.IRODSAccessObjectFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -22,7 +22,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class BasicConveyorBootstrapperImpl implements ConveyorBootstrapper {
 
-	private final Logger log = LoggerFactory
+	private final Logger log = LogManager
 			.getLogger(BasicConveyorBootstrapperImpl.class);
 
 	private final ConveyorBootstrapConfiguration conveyorBootstrapConfiguration;

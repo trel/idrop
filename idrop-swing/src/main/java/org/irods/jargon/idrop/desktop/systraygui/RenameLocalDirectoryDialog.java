@@ -20,7 +20,7 @@ import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileNode;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileSystemModel;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileTree;
 import org.irods.jargon.idrop.exceptions.IdropException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Dialog to gather a new directory name and perform a rename operation on a
@@ -37,7 +37,7 @@ public class RenameLocalDirectoryDialog extends javax.swing.JDialog {
     private final iDrop idrop;
     private final LocalFileTree localFileTree;
     private final LocalFileNode currentNode;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(RenameLocalDirectoryDialog.class);
 
     /**

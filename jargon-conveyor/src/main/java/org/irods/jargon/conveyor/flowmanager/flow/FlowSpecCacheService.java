@@ -15,8 +15,8 @@ import java.util.Collections;
 import java.util.List;
 
 import org.irods.jargon.core.utils.LocalFileUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Service to load flow specifications as DSL script files from a set of
@@ -37,7 +37,7 @@ public class FlowSpecCacheService {
 	 */
 	private final String delimiter = ",";
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(FlowSpecCacheService.class);
 
 	/**

@@ -28,7 +28,7 @@ import org.irods.jargon.idrop.desktop.systraygui.MoveOrCopyiRODSDialog;
 import org.irods.jargon.idrop.desktop.systraygui.iDrop;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.transfer.dao.domain.TransferType;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Transfer handler to handle import/export from the IRODSTree that handles the
@@ -37,6 +37,8 @@ import org.slf4j.LoggerFactory;
  * @author Mike Conway - DICE (www.irods.org)
  */
 public class IRODSTreeTransferHandler extends TransferHandler {
+
+    public static org.apache.logging.log4j.Logger log = LogManager.getLogger(IRODSTreeTransferHandler.class);
 
     /**
      *
@@ -55,8 +57,6 @@ public class IRODSTreeTransferHandler extends TransferHandler {
         super.exportToClipboard(jc, clpbrd, i);
     }
 
-    public static org.slf4j.Logger log = LoggerFactory
-            .getLogger(IRODSTreeTransferHandler.class);
     public final iDrop idropGui;
 
     public IRODSTreeTransferHandler(final iDrop idropGui, final String string) {

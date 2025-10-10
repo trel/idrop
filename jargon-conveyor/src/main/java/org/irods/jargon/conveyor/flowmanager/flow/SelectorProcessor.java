@@ -7,8 +7,8 @@ import org.irods.jargon.conveyor.basic.BasicFlowManagerService;
 import org.irods.jargon.conveyor.flowmanager.flow.Selector.FlowActionEnum;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
 import org.irods.jargon.transfer.dao.domain.TransferType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Processor for comparing flows to transfers to decide whether the flow is
@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SelectorProcessor {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(BasicFlowManagerService.class);
 
 	public SelectorProcessor() {

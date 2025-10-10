@@ -10,8 +10,8 @@ import org.hibernate.criterion.Restrictions;
 import org.irods.jargon.transfer.dao.ConfigurationPropertyDAO;
 import org.irods.jargon.transfer.dao.TransferDAOException;
 import org.irods.jargon.transfer.dao.domain.ConfigurationProperty;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +26,9 @@ import org.springframework.stereotype.Component;
 public class ConfigurationPropertyDAOImpl  implements
 		ConfigurationPropertyDAO {
 
-    /**
+	private static final Logger log = LogManager.getLogger(ConfigurationPropertyDAOImpl.class);
+
+	/**
      * @return the sessionFactory
      */
     public SessionFactory getSessionFactory() {
@@ -40,9 +42,6 @@ public class ConfigurationPropertyDAOImpl  implements
         this.sessionFactory = sessionFactory;
     }
 
-	private static final Logger log = LoggerFactory
-			.getLogger(ConfigurationPropertyDAOImpl.class);
-        
         @Autowired
         private SessionFactory sessionFactory;
 

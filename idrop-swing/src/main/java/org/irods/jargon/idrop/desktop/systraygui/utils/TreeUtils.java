@@ -20,7 +20,7 @@ import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileSystemMo
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.netbeans.swing.outline.Outline;
 import org.netbeans.swing.outline.TreePathSupport;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * This is a set of utilities for manipulating a swing Jtree
@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
  */
 public class TreeUtils {
 
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(TreeUtils.class);
 
     /**

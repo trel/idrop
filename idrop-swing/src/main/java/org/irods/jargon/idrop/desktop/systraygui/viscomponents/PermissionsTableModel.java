@@ -12,7 +12,7 @@ import org.irods.jargon.core.protovalues.FilePermissionEnum;
 import org.irods.jargon.core.pub.domain.User;
 import org.irods.jargon.core.pub.domain.UserFilePermission;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -26,7 +26,7 @@ public class PermissionsTableModel extends AbstractTableModel {
     private static final long serialVersionUID = -1321576471314258457L;
     List<UserFilePermission> permissions;
     List<UserFilePermission> origPermissions;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(MetadataTableModel.class);
 
     public PermissionsTableModel(final List<UserFilePermission> permissions) {

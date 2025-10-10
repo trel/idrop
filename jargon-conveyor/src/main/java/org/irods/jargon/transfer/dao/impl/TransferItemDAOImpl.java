@@ -9,8 +9,8 @@ import org.hibernate.criterion.Restrictions;
 import org.irods.jargon.transfer.dao.TransferDAOException;
 import org.irods.jargon.transfer.dao.TransferItemDAO;
 import org.irods.jargon.transfer.dao.domain.TransferItem;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
@@ -22,7 +22,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 public class TransferItemDAOImpl extends HibernateDaoSupport implements
 		TransferItemDAO {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(TransferItemDAOImpl.class);
 
 	public TransferItemDAOImpl() {

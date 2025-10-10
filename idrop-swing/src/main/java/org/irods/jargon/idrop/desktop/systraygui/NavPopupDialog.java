@@ -14,7 +14,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 import org.irods.jargon.core.utils.MiscIRODSUtils;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author Mike
@@ -23,7 +23,7 @@ public class NavPopupDialog extends javax.swing.JDialog {
 
     private static final long serialVersionUID = 1471807767210660336L;
     private final iDrop idropGui;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(NavPopupDialog.class);
 
     public NavPopupDialog(final iDrop parent, final boolean modal) {

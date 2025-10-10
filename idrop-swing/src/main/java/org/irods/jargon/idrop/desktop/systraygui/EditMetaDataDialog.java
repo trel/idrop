@@ -15,7 +15,7 @@ import org.irods.jargon.core.pub.DataObjectAO;
 import org.irods.jargon.core.pub.IRODSFileSystem;
 import org.irods.jargon.core.pub.domain.AvuData;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.MetadataTableModel;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -36,7 +36,7 @@ public class EditMetaDataDialog extends javax.swing.JDialog implements
     private final String selectedObjectFullPath;
     private final MetadataTableModel tableModel;
     private final int selectedRow;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(EditMetaDataDialog.class);
 
     /**

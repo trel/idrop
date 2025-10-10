@@ -22,7 +22,7 @@ import org.irods.jargon.core.pub.UserAO;
 import org.irods.jargon.core.pub.domain.User;
 import org.irods.jargon.core.pub.domain.UserFilePermission;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.PermissionsTableModel;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -41,7 +41,7 @@ public class AddPermissionsDialog extends javax.swing.JDialog implements
     private final String selectedObjectFullPath;
     private final PermissionsTableModel tableModel;
     private UserFilePermission permissionToAdd = null;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(EditMetaDataDialog.class);
 
     /**

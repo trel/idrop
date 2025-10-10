@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.irods.jargon.transfer.dao.domain.Transfer;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Lay out a dashboard by analyzing the given transfer and its attempts
@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
  */
 public class DashboardLayoutService {
 
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(DashboardLayoutService.class);
 
     /**

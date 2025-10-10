@@ -11,8 +11,8 @@ import org.irods.jargon.conveyor.flowmanager.microservice.MicroserviceException;
 import org.irods.jargon.core.exception.JargonException;
 import org.irods.jargon.core.transfer.TransferStatus;
 import org.irods.jargon.datautils.filearchive.LocalTarFileArchiver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Microservice to tar up a given directory (based on the source collection of
@@ -30,7 +30,7 @@ public class TarCollectionMicroservice extends Microservice {
 	public static final String TAR_FILE_NAME = TarCollectionMicroservice.class
 			.getName() + ":TAR_FILE_NAME";
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(TarCollectionMicroservice.class);
 
 	@Override

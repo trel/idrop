@@ -30,7 +30,7 @@ import org.irods.jargon.idrop.desktop.systraygui.viscomponents.IRODSOutlineModel
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.LocalFileNode;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.finder.IRODSFinderDialog;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -40,7 +40,7 @@ public class DiffSelectDialog extends javax.swing.JDialog {
 
     private final IDROPCore idropCore;
     private final iDrop idropGui;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(DiffSelectDialog.class);
 
     /**

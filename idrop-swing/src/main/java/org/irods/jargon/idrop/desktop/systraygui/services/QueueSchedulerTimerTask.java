@@ -2,7 +2,7 @@ package org.irods.jargon.idrop.desktop.systraygui.services;
 
 import java.util.TimerTask;
 
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author Mike Conway - DICE (www.irods.org)
@@ -13,7 +13,7 @@ public class QueueSchedulerTimerTask extends TimerTask {
 	// private final iDrop idropGui;
 	public final static long EVERY_10_MINUTES = 1000 * 60 * 10;
 	public final static long EVERY_30_SECONDS = 1000 * 30;
-	private final org.slf4j.Logger log = LoggerFactory
+	private final org.apache.logging.log4j.Logger log = LogManager
 			.getLogger(QueueSchedulerTimerTask.class);
 
 	/*

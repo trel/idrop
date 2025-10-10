@@ -9,7 +9,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JWindow;
 
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -21,7 +21,7 @@ public class IDROPSplashWindow extends JWindow {
      *
      */
     private static final long serialVersionUID = 1L;
-    private final org.slf4j.Logger log = LoggerFactory
+    private final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IDROPSplashWindow.class);
     private final ImageIcon splashImage = new ImageIcon(IDROPSplashWindow.class
             .getClassLoader().getResource(

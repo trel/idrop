@@ -16,7 +16,7 @@ import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.transfer.dao.domain.Transfer;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -30,7 +30,7 @@ public class TransferManagerTableModel extends AbstractTableModel { // extends
      *
      */
     private static final long serialVersionUID = 5019020669516135403L;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(TransferManagerTableModel.class);
     private List<Transfer> transfers = null;
     private final IDROPCore idropCore;

@@ -22,7 +22,7 @@ import org.irods.jargon.transfer.dao.domain.FrequencyType;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
 import org.irods.jargon.transfer.dao.domain.SynchronizationType;
 import org.openide.util.Exceptions;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -32,7 +32,7 @@ public class SynchronizationDialog extends javax.swing.JDialog implements ListSe
 
     private final IDROPCore idropCore;
     private int selectedTableRow = -1;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(SynchronizationDialog.class);
 
     private Synchronization synchronization = null;

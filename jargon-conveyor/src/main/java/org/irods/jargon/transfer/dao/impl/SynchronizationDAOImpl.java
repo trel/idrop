@@ -10,8 +10,8 @@ import org.hibernate.criterion.Restrictions;
 import org.irods.jargon.transfer.dao.SynchronizationDAO;
 import org.irods.jargon.transfer.dao.TransferDAOException;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
@@ -23,7 +23,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 public class SynchronizationDAOImpl extends HibernateDaoSupport implements
 		SynchronizationDAO {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(SynchronizationDAOImpl.class);
 
 	public SynchronizationDAOImpl() {

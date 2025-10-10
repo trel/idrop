@@ -11,7 +11,7 @@ import org.irods.jargon.core.exception.JargonException;
 import org.irods.jargon.core.query.MetaDataAndDomainData;
 import org.irods.jargon.core.query.MetaDataAndDomainData.MetadataDomain;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Model for a table viewing metadata
@@ -26,7 +26,7 @@ public class MetadataTableModel extends AbstractTableModel {
     private static final long serialVersionUID = -3443866285303437887L;
     private List<MetaDataAndDomainData> metadataAndDomainData = null;
     private List<MetaDataAndDomainData> origMetadataAndDomainData;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(MetadataTableModel.class);
 
     public MetadataTableModel(

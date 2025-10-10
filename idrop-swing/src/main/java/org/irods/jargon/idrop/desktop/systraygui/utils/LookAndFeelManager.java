@@ -11,7 +11,7 @@ import org.irods.jargon.idrop.desktop.systraygui.IDROPCore;
 import org.irods.jargon.idrop.desktop.systraygui.services.IdropConfigurationService;
 import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author Mike Conway - DICE (www.irods.org)
@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 public class LookAndFeelManager {
 
     private final IDROPCore idropCore;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(LookAndFeelManager.class);
 
     public LookAndFeelManager(final IDROPCore idropCore) {

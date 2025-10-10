@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import org.irods.jargon.idrop.exceptions.IdropException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Represents an initial bootstrap service that will run before the iDrop
@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 public class IdropPreDatabaseBootstrapperServiceImpl implements
 		IdropPreDatabaseBootstrapperService {
 
-	private static final org.slf4j.Logger log = LoggerFactory
+	private static final org.apache.logging.log4j.Logger log = LogManager
 			.getLogger(IdropPreDatabaseBootstrapperServiceImpl.class);
 
 	@Override

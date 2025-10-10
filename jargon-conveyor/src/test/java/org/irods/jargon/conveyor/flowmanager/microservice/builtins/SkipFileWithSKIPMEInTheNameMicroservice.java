@@ -6,8 +6,8 @@ package org.irods.jargon.conveyor.flowmanager.microservice.builtins;
 import org.irods.jargon.conveyor.flowmanager.microservice.Microservice;
 import org.irods.jargon.conveyor.flowmanager.microservice.MicroserviceException;
 import org.irods.jargon.core.transfer.TransferStatus;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * A basic microservice that will send a log message, and depending on log
@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SkipFileWithSKIPMEInTheNameMicroservice extends Microservice {
 
-	private static final Logger log = LoggerFactory
+	private static final Logger log = LogManager
 			.getLogger(SkipFileWithSKIPMEInTheNameMicroservice.class);
 
 	public static final String SKIPME = "SKIPME";

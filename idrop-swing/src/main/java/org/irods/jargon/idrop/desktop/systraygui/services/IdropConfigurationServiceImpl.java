@@ -28,7 +28,7 @@ import org.irods.jargon.idrop.exceptions.IdropException;
 import org.irods.jargon.idrop.exceptions.IdropRuntimeException;
 import org.irods.jargon.transfer.dao.domain.ConfigurationProperty;
 import org.irods.jargon.transfer.dao.domain.Synchronization;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Manage configuration information. This service will initialize and manage
@@ -41,7 +41,7 @@ public class IdropConfigurationServiceImpl implements IdropConfigurationService 
     private final String idropConfigRootDirectoryAbsolutePath;
     private final ConfigurationService configurationService;
     private final IDROPCore idropCore;
-    private static final org.slf4j.Logger log = LoggerFactory
+    private static final org.apache.logging.log4j.Logger log = LogManager
             .getLogger(IdropConfigurationServiceImpl.class);
 
     public IdropConfigurationServiceImpl(

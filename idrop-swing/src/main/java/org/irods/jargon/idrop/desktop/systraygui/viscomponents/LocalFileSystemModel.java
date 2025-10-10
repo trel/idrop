@@ -10,7 +10,7 @@ import org.irods.jargon.core.transfer.TransferStatus;
 import org.irods.jargon.core.transfer.TransferStatus.TransferState;
 import org.irods.jargon.idrop.desktop.systraygui.utils.TreeUtils;
 import org.irods.jargon.idrop.exceptions.IdropException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * (NEW) Implementation of the DefaultTreeModel for the local file system.
@@ -23,7 +23,7 @@ public class LocalFileSystemModel extends DefaultTreeModel {
      *
      */
     private static final long serialVersionUID = 8353168431307770952L;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(LocalFileSystemModel.class);
 
     public LocalFileSystemModel(final DefaultMutableTreeNode node) {

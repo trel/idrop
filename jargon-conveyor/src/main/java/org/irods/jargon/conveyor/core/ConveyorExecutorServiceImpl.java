@@ -8,8 +8,8 @@ import java.util.concurrent.Future;
 import org.irods.jargon.conveyor.core.callables.AbstractConveyorCallable;
 import org.irods.jargon.conveyor.core.callables.ConveyorCallableFactory;
 import org.irods.jargon.transfer.dao.domain.TransferAttempt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Implementation of an executor of conveyor processes. The current
@@ -25,7 +25,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ConveyorExecutorServiceImpl implements ConveyorExecutorService {
 
-	private final Logger log = LoggerFactory
+	private final Logger log = LogManager
 			.getLogger(ConveyorExecutorServiceImpl.class);
 
 	private ErrorStatus errorStatus = ErrorStatus.OK;

@@ -14,7 +14,7 @@ import org.irods.jargon.core.pub.DataObjectAO;
 import org.irods.jargon.core.pub.IRODSFileSystem;
 import org.irods.jargon.core.pub.domain.UserFilePermission;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.PermissionsTableModel;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -33,7 +33,7 @@ public class EditPermissionsDialog extends javax.swing.JDialog {
     private final String selectedObjectFullPath;
     private final PermissionsTableModel tableModel;
     private final UserFilePermission permissionToUpdate;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(EditMetaDataDialog.class);
 
     /**

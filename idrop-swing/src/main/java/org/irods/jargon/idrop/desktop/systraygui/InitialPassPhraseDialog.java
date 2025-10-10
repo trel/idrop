@@ -13,7 +13,7 @@ import javax.swing.UIManager;
 import org.irods.jargon.conveyor.core.ConveyorExecutionException;
 import org.irods.jargon.idrop.desktop.systraygui.viscomponents.MetadataTableModel;
 import org.irods.jargon.transfer.exception.PassPhraseInvalidException;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 /**
  *
@@ -27,7 +27,7 @@ public class InitialPassPhraseDialog extends javax.swing.JDialog {
     private static final long serialVersionUID = -7747139565320723806L;
     private final IDROPCore idropCore;
     private boolean validated = false;
-    public static org.slf4j.Logger log = LoggerFactory
+    public static org.apache.logging.log4j.Logger log = LogManager
             .getLogger(InitialPassPhraseDialog.class);
 
     /**
